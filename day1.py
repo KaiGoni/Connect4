@@ -11,6 +11,6 @@ def displayBoard():
         for col in range(7):                # Repeat for each column (col = 0, then 1, then 2, then 3, then 4, then 5, then 6)
             print(board[col][row], end="")  # Display each point on the board, and do not go to the next line.
         print()                             # Go to the next line after doing all the values on a column
-    print("1234567")                        # Show which 
+    print("1234567")                        # Display the columns underneath
 
 displayBoard()                          # Output of what we did so far today, creating a board array and a display for it
