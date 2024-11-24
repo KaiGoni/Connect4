@@ -1,20 +1,27 @@
+'''
+Connect 4
+Day 3a (extra day)
+
+Description: Changed the placeholder dash to an empty space, added a win detection
+'''
+
 # Create board array
 board = []
-for col in range(7):                    # Repeat for each column
+for col in range(7):                    # Repeat for each of the 7 columns
     board.append([])                    # Add an array per column
-    for row in range(6):                # Repeat for each row
-        board[col].append(" ")          # Add an underscore per row (So we can see what's happening for the time being)
+    for row in range(6):                # Repeat for each of the 6 rows
+        board[col].append(" ")
 
 # Define a variable for whose turn it is
 turn = "O" # Note: I'll use "O" and "X" as the players, as in tic-tac-toe
 
 # Display the game
 def displayBoard():
-    for row in range(5, -1, -1):            # Starting from row 5, display each row underneath (In other words, repeat where row = 5, then 4, then 3, then 2, then 1, then 0) 
+    for row in range(5, -1, -1):            # Starting from row 5 on the board, display each row underneath (In other words, repeat where row = 5, then 4, then 3, then 2, then 1, then 0) 
         for col in range(7):                # Repeat for each column (col = 0, then 1, then 2, then 3, then 4, then 5, then 6)
-            print(board[col][row], end="")  # Display each point on the board, and do not go to the next line.
+            print(board[col][row], end=" ") # Display each point on the board, and do not go to the next line.
         print()                             # Go to the next line after doing all the values on a column
-    print("1234567")                        # Display the columns underneath
+    print("1 2 3 4 5 6 7")                  # Display the columns underneath
 
 # Checks if the player input is a valid input
 def isValidInput(input):

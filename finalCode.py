@@ -1,3 +1,11 @@
+'''
+Connect 4
+Final Code
+
+Description: Slight code improvements using product() function from itertools, added a detection for if the
+    game is a tie, colored the display using ANSI colors, other slight modifications to the display
+'''
+
 from itertools import product
 # Create board array
 board = []
@@ -13,6 +21,7 @@ turn = "O" # Note: I'll use "O" and "X" as the players, as in tic-tac-toe
 spacesRemaining = 42
 
 # Create a dictionary for what color to use for each space
+# Colors found here: https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
 spaceColors = {
     " ": "",
     "O": "\033[101m",
